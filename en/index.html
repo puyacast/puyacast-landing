@@ -1,1 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PuyaCast | Wisdom & Research</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cream: #FDFBF7;
+            --navy: #1E3A8A;
+            --teal: #0D9488;
+            --orange: #F97316;
+            --gray: #475569;
+        }
 
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--cream);
+            color: var(--navy);
+            line-height: 1.8;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 5%;
+            border-bottom: 1px solid rgba(30, 58, 138, 0.1);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--teal);
+            text-decoration: none;
+            letter-spacing: -1px;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--navy);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--teal);
+        }
+
+        .lang-switch {
+            font-size: 0.9rem;
+            padding: 4px 12px;
+            border: 1px solid var(--navy);
+            border-radius: 20px;
+            color: var(--navy);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .lang-switch:hover {
+            background-color: var(--navy);
+            color: var(--cream);
+        }
+
+        main {
+            padding: 6rem 5%;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .slogan {
+            font-size: 1.1rem;
+            color: var(--orange);
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            letter-spacing: -1px;
+        }
+
+        .description {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 3.5rem;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .btn {
+            padding: 12px 32px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background-color: var(--teal);
+            color: var(--cream);
+            border: 2px solid var(--teal);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--teal);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--navy);
+            border: 2px solid var(--navy);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--navy);
+            color: var(--cream);
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 5%;
+            font-size: 0.9rem;
+            color: var(--gray);
+            border-top: 1px solid rgba(30, 58, 138, 0.1);
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 1.5rem; }
+            h1 { font-size: 2.5rem; }
+            .btn-container { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">PuyaCast</a>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Research</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="../index.html" class="lang-switch">EN | FA</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="slogan">« A New Vision for the Future Based on Looking at the Past »</div>
+        <h1>Bridging Ancient Wisdom<br>& Modern Tools</h1>
+        <p class="description">
+            PuyaCast is a research, educational, and cultural platform dedicated to exploring profound human concepts and combining them with contemporary knowledge to pave the way for growth and awareness.
+        </p>
+        
+        <div class="btn-container">
+            <a href="#" class="btn btn-primary">Library & Articles</a>
+            <a href="#" class="btn btn-secondary">Watch Podcasts</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>All rights reserved for PuyaCast Research Media. © 2026</p>
+        <p style="font-size: 0.8rem; margin-top: 0.5rem;">ORCID: 0009-0002-3549-0612</p>
+    </footer>
+
+</body>
+</html>
