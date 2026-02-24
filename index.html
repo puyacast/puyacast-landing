@@ -3,103 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>پویاکست | PuyaCast</title>
+    <title>پویاکست | پایگاه پژوهش و خرد</title>
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.0.0/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
     <style>
+        /* متغیرهای رنگی برند پویاکست */
+        :root {
+            --cream: #FDFBF7;
+            --navy: #1E3A8A;
+            --teal: #0D9488;
+            --orange: #F97316;
+            --gray: #475569;
+        }
+
         body {
             margin: 0;
             padding: 0;
             font-family: 'Vazirmatn', sans-serif;
-            background-color: #FDFBF7; /* رنگ کرم برند (صفا) */
-            color: #1E3A8A; /* رنگ سورمه‌ای برند (اعتماد) */
+            background-color: var(--cream);
+            color: var(--navy);
+            line-height: 1.8;
+        }
+
+        /* منوی ناوبری (Header) */
+        header {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            height: 100vh;
-            text-align: center;
-            box-sizing: border-box;
+            padding: 2rem 5%;
+            border-bottom: 1px solid rgba(30, 58, 138, 0.1);
         }
-        .container {
-            padding: 2rem;
-            max-width: 700px;
-            animation: fadeIn 1.5s ease-in-out;
-        }
-        h1 {
-            color: #0D9488; /* رنگ فیروزه‌ای (خرد) */
-            font-size: 3.5rem;
-            margin-bottom: 0.2rem;
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--teal);
+            text-decoration: none;
             letter-spacing: -1px;
         }
-        .english-name {
-            font-size: 1.2rem;
-            color: #1E3A8A;
-            letter-spacing: 4px;
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
         }
-        .slogan {
-            font-size: 1.3rem;
-            color: #F97316; /* رنگ نارنجی (انرژی) */
-            margin-bottom: 2.5rem;
+
+        nav a {
+            text-decoration: none;
+            color: var(--navy);
             font-weight: 500;
+            transition: color 0.3s;
         }
-        .message {
+
+        nav a:hover {
+            color: var(--teal);
+        }
+
+        .lang-switch {
+            font-size: 0.9rem;
+            padding: 4px 12px;
+            border: 1px solid var(--navy);
+            border-radius: 20px;
+            color: var(--navy);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .lang-switch:hover {
+            background-color: var(--navy);
+            color: var(--cream);
+        }
+
+        /* بخش اصلی (Hero Section) */
+        main {
+            padding: 6rem 5%;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .slogan {
             font-size: 1.2rem;
-            margin-bottom: 3rem;
-            line-height: 1.8;
-            color: #334155;
+            color: var(--orange);
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
         }
-        .links-container {
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .description {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 3.5rem;
+        }
+
+        /* دکمه‌های اقدام (CTA) */
+        .btn-container {
             display: flex;
             justify-content: center;
             gap: 1.5rem;
-            flex-wrap: wrap;
         }
+
         .btn {
-            padding: 12px 24px;
-            border: 2px solid #0D9488;
-            border-radius: 30px;
-            color: #0D9488;
+            padding: 12px 32px;
+            border-radius: 4px; /* گوشه‌های تیزتر برای کلاس کاری آکادمیک */
             text-decoration: none;
             font-weight: bold;
-            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            transition: all 0.3s;
         }
-        .btn:hover {
-            background-color: #0D9488;
-            color: #FDFBF7;
-            box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
-        }
+
         .btn-primary {
-            background-color: #0D9488;
-            color: #FDFBF7;
+            background-color: var(--teal);
+            color: var(--cream);
+            border: 2px solid var(--teal);
         }
+
         .btn-primary:hover {
-            background-color: #0F766E;
-            border-color: #0F766E;
+            background-color: transparent;
+            color: var(--teal);
         }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--navy);
+            border: 2px solid var(--navy);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--navy);
+            color: var(--cream);
+        }
+
+        /* پاورقی (Footer) */
+        footer {
+            text-align: center;
+            padding: 3rem 5%;
+            font-size: 0.9rem;
+            color: var(--gray);
+            border-top: 1px solid rgba(30, 58, 138, 0.1);
+            margin-top: 4rem;
+        }
+
+        /* ریسپانسیو برای موبایل */
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 1.5rem; }
+            h1 { font-size: 2.5rem; }
+            .btn-container { flex-direction: column; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>پویاکست</h1>
-        <div class="english-name">PuyaCast Studio</div>
+
+    <header>
+        <a href="#" class="logo">پویاکست</a>
+        <nav>
+            <a href="#">خانه</a>
+            <a href="#">پژوهش‌ها</a>
+            <a href="#">درباره ما</a>
+            <a href="#">ارتباط</a>
+            <a href="#" class="lang-switch">FA | EN</a>
+        </nav>
+    </header>
+
+    <main>
         <div class="slogan">« نگرشی نو به آینده بر مبنای نگاه به گذشته »</div>
+        <h1>پلی میان خرد باستان<br>و ابزارهای جهان مدرن</h1>
+        <p class="description">
+            پویاکست یک پایگاه پژوهشی، آموزشی و فرهنگی است که می‌کوشد با واکاوی مفاهیم عمیق انسانی و ترکیب آن‌ها با دانش روز، مسیر رشد و آگاهی را هموار سازد.
+        </p>
         
-        <div class="message">
-            این پایگاه در حال ساخت و ارتقاء زیرساخت‌های دیجیتال است.<br>
-            به زودی با محتوایی خردمندانه و فضایی جدید بازخواهیم گشت.
+        <div class="btn-container">
+            <a href="#" class="btn btn-primary">کتابخانه و مقالات</a>
+            <a href="#" class="btn btn-secondary">مشاهده پادکست‌ها</a>
         </div>
-        
-        <div class="links-container">
-            <a href="https://www.youtube.com/@PuyaCastOfficial" class="btn btn-primary" target="_blank">کانال یوتیوب</a>
-            <a href="mailto:info@puyacast.net" class="btn">تماس با ما</a>
-        </div>
-    </div>
+    </main>
+
+    <footer>
+        <p>تمامی حقوق برای رسانه پژوهشی پویاکست محفوظ است. © ۲۰۲۶</p>
+        <p style="font-size: 0.8rem; margin-top: 0.5rem;">ORCID: 0009-0002-3549-0612</p>
+    </footer>
+
 </body>
 </html>
