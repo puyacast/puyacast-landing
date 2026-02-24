@@ -1,48 +1,105 @@
-
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>پویاکست | به زودی</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Vazir', sans-serif;
-      background-color: #fdf9f6;
-      color: #0b1e39;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-    }
-    .container {
-      max-width: 600px;
-    }
-    h1 {
-      font-size: 2rem;
-      color: #f97c47;
-    }
-    p {
-      font-size: 1.2rem;
-      margin-top: 1rem;
-    }
-    .logo {
-      margin-bottom: 1.5rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پویاکست | PuyaCast</title>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.0.0/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #FDFBF7; /* رنگ کرم برند (صفا) */
+            color: #1E3A8A; /* رنگ سورمه‌ای برند (اعتماد) */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .container {
+            padding: 2rem;
+            max-width: 700px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        h1 {
+            color: #0D9488; /* رنگ فیروزه‌ای (خرد) */
+            font-size: 3.5rem;
+            margin-bottom: 0.2rem;
+            letter-spacing: -1px;
+        }
+        .english-name {
+            font-size: 1.2rem;
+            color: #1E3A8A;
+            letter-spacing: 4px;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+        .slogan {
+            font-size: 1.3rem;
+            color: #F97316; /* رنگ نارنجی (انرژی) */
+            margin-bottom: 2.5rem;
+            font-weight: 500;
+        }
+        .message {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            color: #334155;
+        }
+        .links-container {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 12px 24px;
+            border: 2px solid #0D9488;
+            border-radius: 30px;
+            color: #0D9488;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #0D9488;
+            color: #FDFBF7;
+            box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
+        }
+        .btn-primary {
+            background-color: #0D9488;
+            color: #FDFBF7;
+        }
+        .btn-primary:hover {
+            background-color: #0F766E;
+            border-color: #0F766E;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <div class="logo">
-      <img src="logo.png" alt="Puyacast Logo" width="150">
+    <div class="container">
+        <h1>پویاکست</h1>
+        <div class="english-name">PuyaCast Studio</div>
+        <div class="slogan">« نگرشی نو به آینده بر مبنای نگاه به گذشته »</div>
+        
+        <div class="message">
+            این پایگاه در حال ساخت و ارتقاء زیرساخت‌های دیجیتال است.<br>
+            به زودی با محتوایی خردمندانه و فضایی جدید بازخواهیم گشت.
+        </div>
+        
+        <div class="links-container">
+            <a href="https://www.youtube.com/@PuyaCastOfficial" class="btn btn-primary" target="_blank">کانال یوتیوب</a>
+            <a href="mailto:info@puyacast.net" class="btn">تماس با ما</a>
+        </div>
     </div>
-    <h1>وبسایت رسمی پویاکست</h1>
-    <p>در حال آماده‌سازی هستیم...<br>به زودی با محتوایی متفاوت و نگاهی نو بازخواهیم گشت.</p>
-    <p>برای دنبال کردن ما: <br>
-    <a href="https://instagram.com/puyacast.official" target="_blank">اینستاگرام</a></p>
-  </div>
 </body>
 </html>
